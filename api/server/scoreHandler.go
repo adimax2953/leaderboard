@@ -37,6 +37,9 @@ func ScoreHandler(ctx *fasthttp.RequestCtx) {
 			} else {
 				score := fmt.Sprintf("%f", args.Score)
 				clientid := string(ctx.Request.Header.PeekBytes([]byte(textproto.CanonicalMIMEHeaderKey("ClientId"))))
+				if clientid == "" {
+					clientid = string(ctx.Request.Header.PeekBytes([]byte("ClientId")))
+				}
 				_, err := redis.UpdateZset(LeaderKey, "score", score, clientid)
 				if err == nil {
 					result.Status = "ok"
