@@ -1,0 +1,17 @@
+version: 0
+
+db:
+  redis:
+    host: ec2-54-199-213-138.ap-northeast-1.compute.amazonaws.com:6379
+    password: ""
+    db: 0
+    poolSize: 10
+    redisScriptDefinition: "test"
+    redisScriptDB: 1
+api:
+  url: http://127.0.0.1:9090
+  name: "testAPI"      
+  maxConnsPerHost: 512
+  maxIdemponentCallAttempts: 5
+  postscoreUri: /api/v1/score
+  getleaderboardUri: /api/v1/leaderboard
