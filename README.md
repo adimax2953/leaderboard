@@ -1,5 +1,8 @@
 # leaderboard
 
+如發現Redis腳本遺失，請通知我，謝謝。
+
+
 測試步驟
 
 1.首先開個終端機 go run app.go
