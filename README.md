@@ -28,6 +28,7 @@ Please implement reasonable constrains and error handling of these 2 APIs
 5.server.go的69行有一個抓每小時內的每十分鐘的排程去做排行榜重置
 
 6.其餘測試方式如API Example
+
 ![image](https://user-images.githubusercontent.com/13865973/118418756-59333f80-b6ec-11eb-8c30-89ebb18b772e.png)
 
 當然作法很多種，有興趣我們可以一起討論。
